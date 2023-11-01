@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity
         bottomNavigationView
                 .setOnNavigationItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
+
+
+
     }
     Home home = new Home();
     Configuracion configuracion = new Configuracion();
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity
                         .replace(R.id.fragmentContainerView, configuracion)
                         .commit();
                 return true;
-            case R.id.cursos:
+            case R.id.menuCursos:
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fragmentContainerView, cursos)
