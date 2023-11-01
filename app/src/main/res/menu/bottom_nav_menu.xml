@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuHome"
+        android:title="Inicio"
+        android:icon="@mipmap/menu_home"/>
+    <item
+        android:id="@+id/menuCursos"
+        android:title="Cursos"
+        android:icon="@mipmap/menu_cursos"/>
+    <item
+        android:id="@+id/menuDocentes"
+        android:title="Docentes"
+        android:icon="@mipmap/docente"/>
+    <item
+        android:id="@+id/menuConfiguracion"
+        android:title="Configuracion"
+        android:icon="@mipmap/config"/>
+</menu>

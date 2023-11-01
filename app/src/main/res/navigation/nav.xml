@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.itsoeh.jmendoza.evaluacionae.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_login_to_registrar"
+            app:destination="@id/registrar" />
+        <action
+            android:id="@+id/action_login_to_menuestudiante"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_registrar_to_recuperarcontra"
+            app:destination="@id/recuperarcontra" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrar"
+        android:name="com.itsoeh.jmendoza.evaluacionae.Registrar"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" >
+
+        <action
+            android:id="@+id/action_registrar_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/recuperarcontra"
+        android:name="com.itsoeh.jmendoza.evaluacionae.Recuperarcontra"
+        android:label="fragment_recuperarcontra"
+        tools:layout="@layout/fragment_recuperarcontra" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.itsoeh.jmendoza.evaluacionae.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_menuestudiante_to_configuracion"
+            app:destination="@id/configuracion" />
+        <action
+            android:id="@+id/action_home_to_docentes"
+            app:destination="@id/docentes" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracion"
+        android:name="com.itsoeh.jmendoza.evaluacionae.Configuracion"
+        android:label="fragment_configuracion"
+        tools:layout="@layout/fragment_configuracion" >
+        <action
+            android:id="@+id/action_configuracion_to_menuestudiante"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/docentes"
+        android:name="com.itsoeh.ebarrera.evaluacionae.Cursos"
+        android:label="fragment_docentes"
+        tools:layout="@layout/fragment_cursos" >
+        <action
+            android:id="@+id/action_docentes_to_home"
+            app:destination="@id/home" />
+    </fragment>
+</navigation>
